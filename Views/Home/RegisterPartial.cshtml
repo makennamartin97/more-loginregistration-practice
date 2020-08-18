@@ -1,0 +1,51 @@
+@model User
+<h4 class="text-dark">
+    Register
+</h4>
+
+
+<form asp-action="Register" asp-controller="Home"  method="post">
+
+
+  <div class="control-group">
+    <label class="control-label" asp-for="fname">First Name</label>
+    <span class="text-danger" asp-validation-for="fname"></span>
+    <div class="controls">
+        <input type="text" asp-for="fname" placeholder="First Name">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" asp-for="lname">Last Name</label>
+    <span class="text-danger" asp-validation-for="lname"></span>
+    <div class="controls">
+      <input type="text" asp-for="lname" placeholder="Last Name">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" asp-for="email">Email</label>
+    <span class="text-danger" asp-validation-for="email"></span>
+    <div class="controls">
+      <input type="text" asp-for="email" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" asp-for="pw">Password</label>
+    <span class="text-danger" asp-validation-for="pw"></span>
+    <div class="controls">
+      <input type="password" asp-for="pw" placeholder="Password">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" asp-for="confirm">Confirm</label>
+    <span class="text-danger" asp-validation-for="confirm"></span>
+    <div class="controls">
+      <input type="password" asp-for="confirm" placeholder="Confirm Password">
+    </div>
+  </div>
+  <div class="control-group m-2">
+    <div class="controls">
+      <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+  </div>
+
+</form>

@@ -1,0 +1,33 @@
+@model Login
+
+<h4 class="text-dark">
+    Log In
+</h4>
+
+<form asp-action="Login" asp-controller="Home" class="form-horizontal" method="post">
+
+  <div class="control-group">
+    <label class="control-label" asp-for="loginemail">Email</label>
+    <span class="text-danger" asp-validation-for="loginemail"></span>
+    <div class="controls">
+      <input type="text" asp-for="loginemail" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" asp-for="loginpw">Password</label>
+    <span class="text-danger" asp-validation-for="loginpw"></span>
+    <div class="controls ">
+      <input type="password" asp-for="loginpw" placeholder="Password">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox"> Remember me
+      </label><br/>
+      <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+
+
+</form>
